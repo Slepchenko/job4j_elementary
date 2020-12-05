@@ -9,5 +9,13 @@ public class MatrixCheck {
         }
         return true;
     }
-
+ //6.7.2. Моно столбец в матрице. [#409029]
+    public static boolean monoVertical(char[][] board, int column) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][column] != 'X') {
+                return false;
+            }
+        }
+        return true;
+    }
 }

@@ -24,8 +24,22 @@ public class MatrixCheck {
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
         for (int i = 0; i < board.length; i++) {
-            rsl[i] = board[i][i+1];
+            rsl[i] = board[i][i];
         }
         return rsl;
+    }
+
+    //6.7.4. Выигрышные комбинации в сокобан [#409021]
+    public static boolean isWin(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X') {
+                if (monoHorizontal(board, i)) {
+                    return true;
+                } else if (monoVertical(board, i)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

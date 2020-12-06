@@ -9,7 +9,8 @@ public class MatrixCheck {
         }
         return true;
     }
- //6.7.2. Моно столбец в матрице. [#409029]
+
+    //6.7.2. Моно столбец в матрице. [#409029]
     public static boolean monoVertical(char[][] board, int column) {
         for (int i = 0; i < board.length; i++) {
             if (board[i][column] != 'X') {
@@ -17,5 +18,14 @@ public class MatrixCheck {
             }
         }
         return true;
+    }
+
+    //6.7.3. Массив из диагонали матрицы. [#409030]
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i+1];
+        }
+        return rsl;
     }
 }

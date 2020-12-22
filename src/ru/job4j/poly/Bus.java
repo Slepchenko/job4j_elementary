@@ -21,8 +21,8 @@ public class Bus implements Transport {
             return petrolAI92 * value;
         } else if (fuel.equals("98")) {
             return petrolAI98 * value;
-        } else {
-            return dt * value;
         }
+        return dt * value;
+
     }
 }

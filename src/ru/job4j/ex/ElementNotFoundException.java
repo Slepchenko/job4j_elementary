@@ -22,5 +22,6 @@ public class ElementNotFoundException extends Exception {
         } catch(ElementNotFoundException e) {
             System.out.println("Нет такого значения");
         }
+        System.out.println(rsl);
     }
 }
